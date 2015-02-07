@@ -4,7 +4,7 @@ exports.definition = {
 		    "id": "PRIMARY KEY INTEGER",
 		    "original_title": "TEXT",
 		    "poster_path":"TEXT",
-		    "vote_average": "DOUBLE",
+		    "vote_average": "REAL",
 		    "vote_count": "INTEGER"
 		},
 		adapter: {

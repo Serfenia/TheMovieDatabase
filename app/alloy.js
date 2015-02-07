@@ -3,6 +3,7 @@
  * @type {Object}
  */
 var G = Alloy.Globals;
+G.COLORS = Alloy.CFG["COLORS"];
 
 /**
  * Checks whether the device has an internet connection.
