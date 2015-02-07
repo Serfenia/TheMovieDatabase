@@ -1,0 +1,29 @@
+{
+	"global": {
+		"TMDB":{
+			"API_KEY": "b8400d4bb26d55e461d02c837645269a",
+			"LOGIN": "MovieNightService",
+			"PASSWORD": "bripat"
+		},
+		"COLORS": {
+			"ACTION_BAR_COLOR": "#0e83cd",
+			"MAIN_COLOR": "#0e83cd"
+		},
+		"URLS": {
+			"MOVIES": {
+				
+			},
+			"IMAGES": {
+				"POSTER": "http://image.tmdb.org/t/p/w500"
+			}
+		}
+	}, 
+	"env:development": {}, 
+	"env:test": {}, 
+	"env:production": {}, 
+	"os:android": {},
+	"os:blackberry": {},
+	"os:ios": {},
+	"os:mobileweb": {},
+	"dependencies": {}
+}

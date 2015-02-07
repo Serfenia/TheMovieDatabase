@@ -1,0 +1,8 @@
+<Alloy>
+	<Collection src="movie" />
+	<ListView>
+		<ListSection dataCollection="movie">
+			<ListItem title="{title}" image="{poster_path}"></ListItem>
+		</ListSection>
+	</ListView>
+</Alloy>

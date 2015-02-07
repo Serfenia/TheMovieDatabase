@@ -1,0 +1,29 @@
+exports.definition = {
+	config: {
+		columns: {
+		    "id": "PRIMARY KEY INTEGER",
+		    "original_title": "TEXT",
+		    "poster_path":"TEXT",
+		    "vote_average": "DOUBLE",
+		    "vote_count": "INTEGER"
+		},
+		adapter: {
+			type: "sql",
+			collection_name: "movie"
+		}
+	},
+	extendModel: function(Model) {
+		_.extend(Model.prototype, {
+			// extended functions and properties go here
+		});
+
+		return Model;
+	},
+	extendCollection: function(Collection) {
+		_.extend(Collection.prototype, {
+			// extended functions and properties go here
+		});
+
+		return Collection;
+	}
+};

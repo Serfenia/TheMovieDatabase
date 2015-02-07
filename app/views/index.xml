@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="application" class="container" onOpen="onOpen">
+		<ActionBar id="actionBar" title="The Movie Database" />
+		<Require src="view" />
+	</Window>
+</Alloy>

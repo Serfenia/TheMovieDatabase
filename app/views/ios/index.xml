@@ -1,0 +1,7 @@
+<Alloy>
+	<NavigationWindow id="application">
+		<Window class="container">
+			<Require src="view" />
+		</Window>
+	</NavigationWindow>
+</Alloy>
