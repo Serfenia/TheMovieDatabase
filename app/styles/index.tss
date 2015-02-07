@@ -3,5 +3,6 @@
 }
 
 "NavigationWindow[platform=ios]":{
-	tintColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR
+	tintColor: "white"
 }
+

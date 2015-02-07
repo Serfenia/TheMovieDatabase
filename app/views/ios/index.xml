@@ -1,7 +1,6 @@
 <Alloy>
 	<NavigationWindow id="application">
-		<Window class="container" title="The Movie Database">
-			<Require src="view" />
+		<Window id="window" class="container" title="The Movie Database">
 		</Window>
 	</NavigationWindow>
 </Alloy>

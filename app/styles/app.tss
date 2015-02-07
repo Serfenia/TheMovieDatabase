@@ -1,0 +1,14 @@
+"Window":{
+	backgroundColor: "white",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	layout: 'vertical'
+}
+
+"Window[platform=ios]":{
+	barColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR,
+	statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	titleAttributes: {
+		color: 'white'
+	}
+}

@@ -1,0 +1,7 @@
+<Alloy>
+	<Model src="movie" id="movie" instance="true" />
+	<Window class="container">
+		<Label id="title" text="{$.movie.original_title}" />
+		<ImageView id="image" text="{$.movie.poster_path}" />
+	</Window>
+</Alloy>

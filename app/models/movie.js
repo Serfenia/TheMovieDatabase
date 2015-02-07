@@ -3,13 +3,15 @@ exports.definition = {
 		columns: {
 		    "id": "PRIMARY KEY INTEGER",
 		    "original_title": "TEXT",
+		    "overview": "TEXT",
 		    "poster_path":"TEXT",
 		    "vote_average": "REAL",
 		    "vote_count": "INTEGER"
 		},
 		adapter: {
 			type: "sql",
-			collection_name: "movie"
+			collection_name: "movie",
+			idAttribute: "id"
 		}
 	},
 	extendModel: function(Model) {

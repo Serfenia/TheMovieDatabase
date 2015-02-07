@@ -1,4 +1,20 @@
 "ListItem":{
 	height: 50,
-	color: "black"
+	color: "black",
 }
+
+".row":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	layout: "horizontal"
+}
+	".image": {
+		width: 35,
+		height: Ti.UI.FILL
+	}
+	
+	".title": {
+		left: 5,
+		width: Ti.UI.SIZE,
+		height: Ti.UI.FILL
+	}

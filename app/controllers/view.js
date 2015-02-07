@@ -29,3 +29,12 @@ if(G.hasInternet()) {
 	xhr.open("GET", url);
 	xhr.send();
 }
+
+function showMovie(e) {
+	$.trigger("showMovie", {
+		url: "show",
+		data: {
+			id: movieCollection.models[e.itemIndex].attributes.id
+		}
+	});
+};
