@@ -2,6 +2,8 @@
 	<Model src="movie" id="movie" instance="true" />
 	<Window class="container">
 		<Label id="title" text="{$.movie.original_title}" />
-		<ImageView id="image" text="{$.movie.poster_path}" />
+		<ImageView id="image" image="{$.movie.poster_path}" />
+		<Label id="overview" text="{$.movie.overview}" />
+		<Label id="rating" text="Beoordeling: {$.movie.vote_average}" />
 	</Window>
 </Alloy>

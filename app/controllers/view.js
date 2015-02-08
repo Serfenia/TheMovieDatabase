@@ -6,7 +6,7 @@ if(G.hasInternet()) {
 	var xhr = Ti.Network.createHTTPClient({
 		timeout: 10000,
 		onerror: function onerror(e) {
-			
+			G.info(e);
 		},
 		onload: function onload(e) {
 			try {

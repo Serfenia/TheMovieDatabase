@@ -1,4 +1,21 @@
+"Label": {
+	width: "95%",
+	height: Ti.UI.SIZE
+}
 
-".container" : {
-  
+"ImageView": {
+	left: "2.5%",
+	width: "30%",
+	height: Ti.UI.SIZE
+}
+
+"#title": {
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	}
+}
+
+"#rating": {
+	top: 10
 }

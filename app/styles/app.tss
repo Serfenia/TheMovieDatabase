@@ -12,3 +12,10 @@
 		color: 'white'
 	}
 }
+
+"Label": {
+	color: 'black',
+	font: {
+		fontSize: 13
+	}
+}
