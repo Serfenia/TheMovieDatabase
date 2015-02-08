@@ -1,0 +1,9 @@
+<Alloy>
+	<Tab id="tab" title="Search movie">
+		<Window id="win" title="Search movie">
+			<Label>Search for a movie</Label>
+			<SearchBar id="searchView" platform="ios" />
+			<SearchView id="searchView" platform="android" ns="Ti.UI.Android" />
+		</Window>
+	</Tab>
+</Alloy>

@@ -44,6 +44,14 @@ var _ = require("alloy/underscore");
 
 /**
  * The string library for easy and quick string manipulation functions.
+ * @see http://docs.appcelerator.com/titanium/3.0/#!/api/Alloy.builtins.string
  * @type {Object}
  */
 var S = require("alloy/string");
+
+/**
+ * The dialogs object to create quick confirm dialogs
+ * @see http://docs.appcelerator.com/titanium/3.0/#!/api/Alloy.builtins.dialogs
+ * @type {Object}
+ */
+var D = require("alloy/dialogs");

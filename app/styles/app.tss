@@ -1,3 +1,7 @@
+"NavigationWindow[platform=ios]":{
+	tintColor: "white"
+}
+
 "Window":{
 	backgroundColor: "white",
 	width: Ti.UI.FILL,
@@ -8,9 +12,22 @@
 "Window[platform=ios]":{
 	barColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR,
 	statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	navTintColor: 'white',
 	titleAttributes: {
 		color: 'white'
 	}
+}
+
+"TabGroup[platform=android]":{
+	tabsBackgroundColor: 'white'
+}
+
+"Tab":{
+	backgroundColor: 'white'
+}
+
+"TabGroup[platform=ios]":{
+	tabsTintColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR
 }
 
 "Label": {

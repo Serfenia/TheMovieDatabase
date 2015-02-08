@@ -1,5 +1,8 @@
 <Alloy>
-	<Window id="application" class="container" onOpen="onOpen">
-		<ActionBar id="actionBar" title="The Movie Database" />
-	</Window>
+	<TabGroup id="application">
+		<Require src="search/index" />
+		<Require src="popular/index" />
+		<Require src="nowplaying/index" />
+		<Require src="upcoming/index" />
+	</TabGroup>
 </Alloy>

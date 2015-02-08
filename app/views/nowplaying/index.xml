@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Releases">
+		<Window title="Releases">
+			<Label>Releases</Label>
+		</Window>
+	</Tab>
+</Alloy>

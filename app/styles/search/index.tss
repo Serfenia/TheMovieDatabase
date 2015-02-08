@@ -1,0 +1,12 @@
+"#searchView":{
+	width: Ti.UI.FILL,
+	height: 50
+}
+	
+	"#searchView[platform=android]":{
+		iconifiedByDefault: false
+	}
+	
+	"#searchView[platform=ios]":{
+		barColor: Alloy.Globals.COLORS.MAIN_COLOR
+	}

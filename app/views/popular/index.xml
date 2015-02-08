@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Popular movies">
+		<Window title="Popular movies">
+			<Label>Popular Movies</Label>
+		</Window>
+	</Tab>
+</Alloy>

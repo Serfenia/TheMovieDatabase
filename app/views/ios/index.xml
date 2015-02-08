@@ -1,6 +1,0 @@
-<Alloy>
-	<NavigationWindow id="application">
-		<Window id="window" class="container" title="The Movie Database">
-		</Window>
-	</NavigationWindow>
-</Alloy>

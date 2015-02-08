@@ -1,0 +1,6 @@
+<Alloy>
+	<Tab id="tab" title="Upcoming movies">
+		<Window id="win" title="Upcoming movies">
+		</Window>
+	</Tab>
+</Alloy>

@@ -5,11 +5,4 @@ function onOpen() {
 	ABX.setColor('white');
 }
 
-var content = Alloy.createController("view");
-content.on("showMovie", function showSubWindow(e) {
-	Alloy.createController(e.url, e.data).getView().open();
-});
-$.application.add(content.getView());
 $.application.open();
-
-content = null;
