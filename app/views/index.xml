@@ -1,8 +1,11 @@
 <Alloy>
 	<TabGroup id="application">
-		<Require src="search/index" />
-		<Require src="popular/index" />
+		<Menu platform="android">
+			<MenuItem id="search" onClick="openSearch" />
+		</Menu>
 		<Require src="nowplaying/index" />
 		<Require src="upcoming/index" />
+		<Require src="popular/index" />
+		<Require src="toprated/index" />
 	</TabGroup>
 </Alloy>

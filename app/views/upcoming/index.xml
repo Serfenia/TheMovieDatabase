@@ -1,7 +1,10 @@
 <Alloy>
 	<Collection id="movies" src="movie" instance="true" />
 	<Tab id="tab" title="Upcoming movies">
-		<Window id="win" title="Upcoming movies">
+		<Window id="win" title="Upcoming">
+			<RightNavButton platform="ios">
+                <Button class="searchButton" onClick="openSearch" />
+            </RightNavButton>
 			<ListView defaultItemTemplate="default" onItemclick="showMovie">
 -			<Templates>
 -				<ItemTemplate name="default">

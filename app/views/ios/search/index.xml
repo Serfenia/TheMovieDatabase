@@ -1,0 +1,27 @@
+<Alloy>
+	<Collection id="movies" src="movie" instance="true" />
+	<!-- <Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getUpcomingMovies"> -->
+	<NavigationWindow id="win">
+		<Window title="Search movie">
+			<LeftNavButton>
+				<Button title="Back" onClick="closeWindow" />
+			</LeftNavButton>
+			<SearchBar id="searchView" platform="ios" onReturn="search" />
+			<SearchView id="searchView" platform="android" ns="Ti.UI.Android" onSubmit="search" />
+			<ListView defaultItemTemplate="default" onItemclick="showMovie">
+				<Templates>
+					<ItemTemplate name="default">
+						<View bindId="id" class="row">
+			                <ImageView bindId="image" class="image" />
+			                <Label bindId="title" class="title" />
+		            	</View>
+		            </ItemTemplate>
+		
+		        </Templates>
+				<ListSection dataCollection="$.movies">
+					<ListItem id:id="{id}" title:text="{title}" image:image="{poster_path}"></ListItem>
+				</ListSection>
+			</ListView>
+		</Window>
+	</NavigationWindow>
+</Alloy>

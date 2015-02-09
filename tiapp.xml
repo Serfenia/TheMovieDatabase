@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>nl.patrickvanvuuren.themoviedatabase</id>
-    <name>TheMovieDatabase</name>
+    <name>The Movie Database</name>
     <version>1.0.0</version>
     <publisher>Patrick van Vuuren</publisher>
     <url>http://www.patrickvanvuuren.nl</url>
     <description>undefined</description>
     <copyright>2015 by Patrick van Vuuren</copyright>
-    <icon>appicon.png</icon>
+    <icon/>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
@@ -39,9 +39,9 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-	    <manifest>
-	        <application android:theme="@style/Theme.Default"/>
-	    </manifest>
+        <manifest>
+            <application android:theme="@style/Theme.Default"/>
+        </manifest>
     </android>
     <modules>
         <module platform="android">facebook</module>

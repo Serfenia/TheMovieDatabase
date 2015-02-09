@@ -1,6 +1,9 @@
 <Alloy>
-	<Tab title="Releases">
-		<Window title="Releases">
+	<Tab id="tab" title="Releases">
+		<Window id="win" title="Releases">
+			<RightNavButton platform="ios">
+                <Button class="searchButton" onClick="openSearch" />
+            </RightNavButton>
 			<Label>Releases</Label>
 		</Window>
 	</Tab>

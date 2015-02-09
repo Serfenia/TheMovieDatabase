@@ -14,7 +14,13 @@
       "IMAGES": {
         "POSTER": "http://image.tmdb.org/t/p/w500"
       }
-    }
+    },
+    "TAB_PAGES":[
+    	"nowplaying",
+    	"upcoming",
+    	"popular",
+    	"toprated"
+    ]
   },
   "env:development": {},
   "env:test": {},

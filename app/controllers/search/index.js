@@ -12,6 +12,7 @@ if(OS_ANDROID) {
 function search() {
 	if(this.value && this.value.length > 0) {
 		findMovie(this.value);
+		this.blur();
 	}
 }
 
@@ -24,6 +25,7 @@ function saveModel(obj) {
 
 function parseResponse(responseText) {
 	var response = JSON.parse(responseText);		
+	G.info(_.isArray(response.results));
 	if(_.isArray(response.results)) 	
 		_.each(response.results, function(movie) {
 			$.movies.add(saveModel(movie), {silent:true});
@@ -49,8 +51,6 @@ function findMovie(query) {
 			}
 		});
 		
-		G.info(url);
-		G.info(JSON.stringify(CFG));
 		xhr.open("GET", url);
 		xhr.send();
 	} else {
@@ -58,10 +58,27 @@ function findMovie(query) {
 	}
 }
 
-function showMovie(e) {
-	$.tab.open(Alloy.createController("show", {
-		id: $.movies.models[e.itemIndex].attributes.id
-	}).getView());
+var showMovie = function(e) {};
+if(OS_IOS) {
+	var showMovie = function(e) {
+		$.win.openWindow(Alloy.createController("show", {
+			id: $.movies.models[e.itemIndex].attributes.id
+		}).getView());
+	};
+} else if(OS_ANDROID) {
+	var showMovie = function(e) {
+		Alloy.createController("show", {
+			id: $.movies.models[e.itemIndex].attributes.id
+		}).getView().open();
+	};
 }
 
-OS_IOS && $.win.open();
+function closeWindow() {
+	$.win.close({
+		transition: (OS_IOS ? Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT : undefined)
+	});
+}
+
+$.win.open({
+	transition: (OS_IOS ? Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT : undefined)
+});

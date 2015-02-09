@@ -8,5 +8,9 @@
 	}
 	
 	"#searchView[platform=ios]":{
-		barColor: Alloy.Globals.COLORS.MAIN_COLOR
+		barColor: Alloy.Globals.COLORS.MAIN_COLOR,
+		borderWidth: 1,
+		borderColor: Alloy.Globals.COLORS.MAIN_COLOR,
+		hintText: "Search for a movie",
+		tintColor: "#CCCCCC"
 	}

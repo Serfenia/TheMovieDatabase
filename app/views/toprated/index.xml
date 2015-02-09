@@ -1,10 +1,10 @@
 <Alloy>
-	<Tab id="tab" title="Popular">
-		<Window id="win" title="Popular">
+	<Tab title="Releases">
+		<Window title="Releases">
 			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />
             </RightNavButton>
-			<Label>Popular Movies</Label>
+			<Label>Releases</Label>
 		</Window>
 	</Tab>
 </Alloy>

@@ -50,4 +50,9 @@ function showMovie(e) {
 	}).getView());
 };
 
+
+function openSearch() {
+	Alloy.createController("search/index");
+}
+
 getUpcomingMovies();
