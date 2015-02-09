@@ -1,16 +1,16 @@
 {
   "global": {
     "TMDB": {
-      "API_KEY": "b8400d4bb26d55e461d02c837645269a",
-      "LOGIN": "MovieNightService",
-      "PASSWORD": "bripat"
+      "API_KEY": "b8400d4bb26d55e461d02c837645269a"
     },
     "COLORS": {
       "ACTION_BAR_COLOR": "#0e83cd",
       "MAIN_COLOR": "#0e83cd"
     },
     "URLS": {
-      "MOVIES": {},
+      "MOVIES": {
+      	"SEARCH": "http://api.themoviedb.org/3/search/movie"
+      },
       "IMAGES": {
         "POSTER": "http://image.tmdb.org/t/p/w500"
       }

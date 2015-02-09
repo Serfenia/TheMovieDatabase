@@ -36,3 +36,34 @@
 		fontSize: 13
 	}
 }
+
+/* List Properties */
+"ListView": {
+	height: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE,
+	width: Ti.UI.FILL,
+	contentWidth: Ti.UI.FILL
+}
+"ListItem":{
+	height: 50,
+	color: "black",
+}
+
+".row":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	layout: "horizontal"
+}
+	".image": {
+		width: 35,
+		height: Ti.UI.FILL
+	}
+	
+	".title": {
+		left: 5,
+		width: Ti.UI.SIZE,
+		height: Ti.UI.FILL
+	}
+
+
+
