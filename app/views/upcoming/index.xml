@@ -1,6 +1,6 @@
 <Alloy>
 	<Collection id="movies" src="movie" instance="true" />
-	<Tab id="tab" title="Upcoming movies">
+	<Tab id="tab" title="Upcoming">
 		<Window id="win" title="Upcoming">
 			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />

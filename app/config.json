@@ -8,25 +8,26 @@
       "MAIN_COLOR": "#0e83cd"
     },
     "URLS": {
-      "MOVIES": {
-      	"ID": 			"http://api.themoviedb.org/3/movie/",
-        "NOW_PLAYING": 	"http://api.themoviedb.org/3/movie/now_playing",
-      	"UPCOMING": 	"http://api.themoviedb.org/3/movie/upcoming",
-      	"POPULAR": 		"http://api.themoviedb.org/3/movie/popular",
-      	"TOP_RATED": 	"http://api.themoviedb.org/3/movie/top_rated"
-      },
       "SEARCH": {
-      	"MOVIE":"http://api.themoviedb.org/3/search/movie"
+        "MOVIE": "http://api.themoviedb.org/3/search/movie"
+      },
+      "MOVIES": {
+        "ID": "http://api.themoviedb.org/3/movie/",
+        "NOW_PLAYING": "http://api.themoviedb.org/3/movie/now_playing",
+        "UPCOMING": "http://api.themoviedb.org/3/movie/upcoming",
+        "POPULAR": "http://api.themoviedb.org/3/movie/popular",
+        "TOP_RATED": "http://api.themoviedb.org/3/movie/top_rated",
+        "TRAILERS": "http://api.themoviedb.org/3/movie/{id}/videos"
       },
       "IMAGES": {
         "POSTER": "http://image.tmdb.org/t/p/w500"
       }
     },
-    "TAB_PAGES":[
-    	"nowplaying",
-    	"upcoming",
-    	"popular",
-    	"toprated"
+    "TAB_PAGES": [
+      "nowplaying",
+      "upcoming",
+      "popular",
+      "toprated"
     ]
   },
   "env:development": {},

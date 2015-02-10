@@ -1,7 +1,7 @@
 <Alloy>
 	<Collection id="movies" src="movie" instance="true" />
-	<Tab id="tab" title="Releases">
-		<Window id="win" title="Releases">
+	<Tab id="tab" title="Top Rated">
+		<Window id="win" title="Top Rated">
 			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />
             </RightNavButton>

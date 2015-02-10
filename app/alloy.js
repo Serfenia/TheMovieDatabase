@@ -12,6 +12,11 @@ var CFG = Alloy.CFG;
  */
 var G = Alloy.Globals;
 
+/**
+ * Font Awesome in Titanium
+ */
+G.FA = require('fa');
+
 G.COLORS = CFG["COLORS"];
 
 G.URL_PARAMETERS = {
@@ -34,6 +39,13 @@ G.info = function(mes) {
 	Ti.API.info(mes);
 };
 
+/**
+ * Short function for logging JSON
+ * @param obj {Object} Object to be printed
+ */
+G.json = function(obj) {
+	G.info(JSON.stringify(obj));
+};
 
 /**
  * The properties object.

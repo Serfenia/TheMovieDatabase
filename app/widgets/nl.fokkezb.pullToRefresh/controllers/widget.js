@@ -17,8 +17,6 @@ $.show = show;
     return;
   }
   
-  Ti.API.info(JSON.stringify(args));
-
   var list = args.children[0];
   delete args.children;
 

@@ -17,24 +17,25 @@
 			color: 'white'
 		}
 	}
-
-	".searchButton[platform=ios]":{
-		systemButton: Ti.UI.iPhone.SystemButton.SEARCH
-	}
-
-
+	
+/**
+ * 	Tabgroup specific
+ */
 "TabGroup[platform=android]":{
 	tabsBackgroundColor: 'white'
-}
-
-"Tab":{
-	backgroundColor: 'white'
 }
 
 "TabGroup[platform=ios]":{
 	tabsTintColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR
 }
 
+"Tab":{
+	backgroundColor: 'white'
+}
+
+/**
+ * 	Default label
+ */
 "Label": {
 	color: 'black',
 	font: {
@@ -42,6 +43,18 @@
 	}
 }
 
+"ScrollView":{
+	layout: 'vertical',
+	scrollType: 'vertical',
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE,
+	contentWidth: Ti.UI.FILL
+}
+
+/**
+ * 	Custom Item Template for List Items
+ */
 "ListItem":{
 	height: 50,
 	color: "black",
@@ -63,10 +76,27 @@
 		height: Ti.UI.FILL
 	}
 	
-	".buttonFavorite[platform=ios]": {
+/* Buttons */
+".button":{
+	backgroundColor: Alloy.Globals.COLORS.MAIN_COLOR,
+	color: '#FFFFFF',
+	height: 40
+}
+	".buttonFavorite": {
 		right: 5,
-		systemButton: Ti.UI.iPhone.SystemButton.BOOKMARKS
+		font: {
+			fontFamily: 'FontAwesome'
+		},
+		color: Alloy.Globals.COLORS.MAIN_COLOR,
+		title: Alloy.Globals.FA.starO,
+		bubbleParent: false,
+		backgroundColor: 'transparent'
 	}
+	
+	".searchButton[platform=ios]":{
+		systemButton: Ti.UI.iPhone.SystemButton.SEARCH
+	}
+
 
 
 

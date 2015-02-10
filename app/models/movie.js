@@ -6,7 +6,8 @@ exports.definition = {
 		    "overview": "TEXT",
 		    "poster_path":"TEXT",
 		    "vote_average": "REAL",
-		    "vote_count": "INTEGER"
+		    "vote_count": "INTEGER",
+		    "trailers": "TEXT"
 		},
 		adapter: {
 			type: "sql",

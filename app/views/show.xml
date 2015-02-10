@@ -4,9 +4,14 @@
 		<RightNavButton platform="ios">
 			<Button systemButton="ACTION" onClick="shareItem" />
 		</RightNavButton>
-		<Label id="title" text="{$.movie.original_title}" />
-		<ImageView id="image" image="{$.movie.poster_path}" />
-		<Label id="overview" text="{$.movie.overview}" />
-		<Label id="rating" text="Beoordeling: {$.movie.vote_average}" />
+		<ScrollView>
+			<Label id="title" text="{$.movie.original_title}" />
+			<ImageView id="image" image="{$.movie.poster_path}" />
+			
+			<Label id="overview" text="{$.movie.overview}" />
+			<Label id="rating" text="Beoordeling: {$.movie.vote_average}" />
+			
+			<Button id="trailerBtn" visible="false" width="40%" left="2.5%" top="10" class="button" title="Watch Trailer" onClick="watchTrailer" />
+		</ScrollView>
 	</Window>
 </Alloy>
