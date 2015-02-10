@@ -29,7 +29,7 @@ function parseResponse(responseText) {
  */
 function getUpcomingMovies() {
 	if(G.hasInternet()) {
-		var url = CFG["URLS"]["MOVIES"]["UPCOMING"]+"?api_key="+CFG["TMDB"]["API_KEY"];
+		var url = CFG["URLS"]["MOVIES"]["UPCOMING"] + G.URL_PARAMETERS.API_KEY;
 		var xhr = Ti.Network.createHTTPClient({
 			timeout: 10000,
 			onerror: function onerror(e) {

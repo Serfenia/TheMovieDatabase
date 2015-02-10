@@ -1,9 +1,23 @@
 /**
+ * Alloy CFG object.
+ * Contains the data from the config.json
+ * 
+ * @type {Object}
+ */
+var CFG = Alloy.CFG;
+
+/**
  * Alloy Globals pointer.
  * @type {Object}
  */
 var G = Alloy.Globals;
-G.COLORS = Alloy.CFG["COLORS"];
+
+G.COLORS = CFG["COLORS"];
+
+G.URL_PARAMETERS = {
+	API_KEY: "?api_key="+CFG["TMDB"]["API_KEY"],
+	I18N: "&language=en"
+};
 
 /**
  * Checks whether the device has an internet connection.
@@ -20,13 +34,6 @@ G.info = function(mes) {
 	Ti.API.info(mes);
 };
 
-/**
- * Alloy CFG object.
- * Contains the data from the config.json
- * 
- * @type {Object}
- */
-var CFG = Alloy.CFG;
 
 /**
  * The properties object.

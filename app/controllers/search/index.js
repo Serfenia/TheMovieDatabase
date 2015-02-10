@@ -36,7 +36,7 @@ function parseResponse(responseText) {
 function findMovie(query) {
 	$.movies.reset();
 	if(G.hasInternet()) {
-		var url = CFG["URLS"]["SEARCH"]["MOVIE"]+"?query="+escape(query)+"&api_key="+CFG["TMDB"]["API_KEY"];
+		var url = CFG["URLS"]["SEARCH"]["MOVIE"]+"?query="+escape(query) + G.URL_PARAMETERS.API_KEY;
 		var xhr = Ti.Network.createHTTPClient({
 			timeout: 10000,
 			onerror: function(e) {

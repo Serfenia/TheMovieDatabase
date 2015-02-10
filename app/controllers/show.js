@@ -6,7 +6,7 @@ $.movie.set(model.toJSON()[0]);
 
 
 if(G.hasInternet()) {
-	var url = "http://api.themoviedb.org/3/movie/"+args.id+"?api_key="+CFG["TMDB"]["API_KEY"]+"&language=en";
+	var url = CFG["URLS"]["MOVIES"]["ID"] + args.id + G.URL_PARAMETERS.API_KEY + G.URL_PARAMETERS.I18N;
 	var xhr = Ti.Network.createHTTPClient({
 		timeout: 10000,
 		onerror: function onerror(e) {
