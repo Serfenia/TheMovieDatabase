@@ -5,20 +5,21 @@
 			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />
             </RightNavButton>
-			<ListView defaultItemTemplate="default" onItemclick="showMovie">
--			<Templates>
--				<ItemTemplate name="default">
--					<View bindId="id" class="row">
--		                <ImageView bindId="image" class="image" />
--		                <Label bindId="title" class="title" />
--	            	</View>
--	            </ItemTemplate>
--	
--	        </Templates>
--			<ListSection dataCollection="$.movies">
--				<ListItem id:id="{id}" title:text="{title}" image:image="{poster_path}"></ListItem>
--			</ListSection>
--		</ListView>
+            <Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getUpcomingMovies">
+				<ListView defaultItemTemplate="default" onItemclick="showMovie">
+					<Templates>
+						<ItemTemplate name="default">
+							<View bindId="id" class="row">
+				                <ImageView bindId="image" class="image" />
+				                <Label bindId="title" class="title" />
+			            	</View>
+			            </ItemTemplate>
+			        </Templates>
+					<ListSection dataCollection="$.movies">
+						<ListItem id:id="{id}" title:text="{title}" image:image="{poster_path}"></ListItem>
+					</ListSection>
+				</ListView>
+			</Widget>
 		</Window>
 	</Tab>
 </Alloy>

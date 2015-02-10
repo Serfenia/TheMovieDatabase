@@ -1,5 +1,10 @@
 var args = arguments[0] || {};
 
+/**
+ * Saves the model to the local database.
+ * Edits the poster path with a prefix of the image URL as specified in the config.
+ * @param obj {Object} : A movie retrieved from TMDB as JSON
+ */
 function saveModel(obj) {
 	var model = Alloy.createModel('movie');
 	obj.poster_path = obj.poster_path ? CFG["URLS"]["IMAGES"]["POSTER"] + obj.poster_path : "";
@@ -7,6 +12,10 @@ function saveModel(obj) {
 	return model;
 }
 
+/**
+ * Parses the response text by saving the model and adding it to the movie collection
+ * @param responseText {String} : The upcoming movies in a stringified JSON format. 
+ */
 function parseResponse(responseText) {
 	var response = JSON.parse(responseText);			
 	_.each(response.results, function(movie) {
@@ -14,9 +23,13 @@ function parseResponse(responseText) {
 	});
 }
 
+/**
+ * Retrieves the upcoming movies from TMDB with an HTTPClient if the device has an internet connection.
+ * @see http://docs.themoviedb.apiary.io/#reference/movies/movieupcoming
+ */
 function getUpcomingMovies() {
 	if(G.hasInternet()) {
-		var url = "http://api.themoviedb.org/3/movie/upcoming?api_key="+CFG["TMDB"]["API_KEY"];
+		var url = CFG["URLS"]["MOVIES"]["UPCOMING"]+"?api_key="+CFG["TMDB"]["API_KEY"];
 		var xhr = Ti.Network.createHTTPClient({
 			timeout: 10000,
 			onerror: function onerror(e) {
@@ -26,6 +39,7 @@ function getUpcomingMovies() {
 				try {
 					parseResponse(this.responseText);
 					$.movies.trigger('change');
+					$.ptr.hide();
 				} catch(e) {
 					G.info(e);	
 				}
@@ -50,7 +64,10 @@ function showMovie(e) {
 	}).getView());
 };
 
-
+/**
+ * Create the index controller of the search page.
+ * Fired when clicked on the rightNavButton in this view.
+ */
 function openSearch() {
 	Alloy.createController("search/index");
 }

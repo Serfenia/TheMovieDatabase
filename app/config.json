@@ -9,7 +9,13 @@
     },
     "URLS": {
       "MOVIES": {
-      	"SEARCH": "http://api.themoviedb.org/3/search/movie"
+        "NOW_PLAYING": "http://api.themoviedb.org/3/movie/now_playing",
+      	"UPCOMING": "http://api.themoviedb.org/3/movie/upcoming",
+      	"POPULAR": "http://api.themoviedb.org/3/movie/popular",
+      	"TOP_RATED": "http://api.themoviedb.org/3/movie/top_rated"
+      },
+      "SEARCH": {
+      	"MOVIE":"http://api.themoviedb.org/3/search/movie"
       },
       "IMAGES": {
         "POSTER": "http://image.tmdb.org/t/p/w500"

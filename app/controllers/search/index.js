@@ -10,9 +10,10 @@ if(OS_ANDROID) {
 }
 
 function search() {
-	if(this.value && this.value.length > 0) {
-		findMovie(this.value);
-		this.blur();
+	var value = $.searchView.getValue();
+	if(value && value.length > 0) {
+		findMovie(value);
+		$.searchView.blur();
 	}
 }
 
@@ -25,26 +26,27 @@ function saveModel(obj) {
 
 function parseResponse(responseText) {
 	var response = JSON.parse(responseText);		
-	G.info(_.isArray(response.results));
-	if(_.isArray(response.results)) 	
+	if(_.isArray(response.results)) {
 		_.each(response.results, function(movie) {
 			$.movies.add(saveModel(movie), {silent:true});
 		});
+	}
 }
 
 function findMovie(query) {
 	$.movies.reset();
 	if(G.hasInternet()) {
-		var url = CFG["URLS"]["MOVIES"]["SEARCH"]+"?query="+escape(query)+"&api_key="+CFG["TMDB"]["API_KEY"];
+		var url = CFG["URLS"]["SEARCH"]["MOVIE"]+"?query="+escape(query)+"&api_key="+CFG["TMDB"]["API_KEY"];
 		var xhr = Ti.Network.createHTTPClient({
 			timeout: 10000,
-			onerror: function onerror(e) {
+			onerror: function(e) {
 				G.info(e);
 			},
-			onload: function onload(e) {
+			onload: function(e) {
 				try {
 					parseResponse(this.responseText);
 					$.movies.trigger('change');
+					$.ptr.hide();
 				} catch(e) {
 					G.info(JSON.stringify(e));	
 				}

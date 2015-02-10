@@ -1,6 +1,9 @@
 <Alloy>
 	<Model src="movie" id="movie" instance="true" />
 	<Window class="container">
+		<RightNavButton platform="ios">
+			<Button systemButton="ACTION" onClick="shareItem" />
+		</RightNavButton>
 		<Label id="title" text="{$.movie.original_title}" />
 		<ImageView id="image" image="{$.movie.poster_path}" />
 		<Label id="overview" text="{$.movie.overview}" />

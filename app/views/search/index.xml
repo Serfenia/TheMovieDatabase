@@ -1,10 +1,7 @@
 <Alloy>
 	<Collection id="movies" src="movie" instance="true" />
 	<!-- <Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getUpcomingMovies"> -->
-	<Window id="win" title="Search movie">
-		<LeftNavButton platform="ios">
-			<Button title="Back" onClick="closeWindow" />
-		</LeftNavButton>
+	<Window id="win" title="Search movie">	
 		<SearchBar id="searchView" platform="ios" onReturn="search" />
 		<SearchView id="searchView" platform="android" ns="Ti.UI.Android" onSubmit="search" />
 		<ListView defaultItemTemplate="default" onItemclick="showMovie">

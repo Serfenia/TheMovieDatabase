@@ -27,3 +27,7 @@ if(G.hasInternet()) {
 	xhr.open("GET", url);
 	xhr.send();
 }
+
+function shareItem() {
+	
+}
