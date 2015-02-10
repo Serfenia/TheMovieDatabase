@@ -10,7 +10,6 @@
 					<View bindId="id" class="row">
 		                <ImageView bindId="image" class="image" />
 		                <Label bindId="title" class="title" />
-		                <Button class="buttonFavorite" />
 	            	</View>
 	            </ItemTemplate>
 	
