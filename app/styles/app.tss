@@ -50,17 +50,22 @@
 ".row":{
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
-	layout: "horizontal"
 }
 	".image": {
+		left: 0,
 		width: 35,
 		height: Ti.UI.FILL
 	}
 	
 	".title": {
-		left: 5,
-		width: Ti.UI.SIZE,
+		left: 40,
+		width: "75%",
 		height: Ti.UI.FILL
+	}
+	
+	".buttonFavorite[platform=ios]": {
+		right: 5,
+		systemButton: Ti.UI.iPhone.SystemButton.BOOKMARKS
 	}
 
 
