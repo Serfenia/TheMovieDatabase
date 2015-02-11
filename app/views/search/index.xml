@@ -1,10 +1,8 @@
 <Alloy>
 	<Collection id="movies" src="movie" instance="true" />
 	<!-- <Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getUpcomingMovies"> -->
-	<Window id="win" title="Search movie">	
-		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
-		<SearchBar id="searchView" platform="ios" onReturn="search" />
-		<SearchView id="searchView" platform="android" ns="Ti.UI.Android" onSubmit="search" />
+	<Window id="win">	
+		<ActionBar id="actionBar" onHomeIconItemSelected="closeWindow" />
 		<ListView defaultItemTemplate="default" onItemclick="showMovie">
 			<Templates>
 				<ItemTemplate name="default">

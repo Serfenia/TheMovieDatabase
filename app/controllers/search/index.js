@@ -1,19 +1,36 @@
 var args = arguments[0] || {};
+var searchView = $.searchView;
 
+/**
+ * SearchView in action bar
+ */
 if(OS_ANDROID) {
+	searchView = $.UI.create("SearchView",{
+		id: "searchView",
+		ns: "Ti.UI.Android"
+	});
+	searchView.addEventListener("submit", search);
 	require("com.alcoapps.actionbarextras").setSearchView({
-		searchView: $.searchView,
-		backgroundColor: CFG["COLORS"]["MAIN_COLOR"],
+		searchView: searchView,
 		textColor: 'white',
 		hintColor: 'white'
 	});
+	
+	$.win.activity.onCreateOptionsMenu = function(e) {
+	    var menu = e.menu;
+	    var menuItem = menu.add({
+	        title: 'Search movie',
+	        actionView : searchView,
+	        showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
+	    });
+	};
 }
 
 function search() {
-	var value = $.searchView.getValue();
+	var value = searchView.getValue();
 	if(value && value.length > 0) {
 		findMovie(value);
-		$.searchView.blur();
+		searchView.blur();
 	}
 }
 
