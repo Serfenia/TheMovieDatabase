@@ -100,7 +100,6 @@
 			fontFamily: 'FontAwesome'
 		},
 		color: Alloy.Globals.COLORS.MAIN_COLOR,
-		title: Alloy.Globals.FA.starO,
 		bubbleParent: false,
 		backgroundColor: 'transparent'
 	}

@@ -1,6 +1,9 @@
 <Alloy>
 	<TabGroup id="win" class="container" onClick="clickTab">
 		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
+		<Menu platform="android">
+			<MenuItem showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" icon="Ti.Android.R.drawable.ic_menu_share"></MenuItem>
+		</Menu>
 		<Tab title="Overview">
 			<Window>
 				

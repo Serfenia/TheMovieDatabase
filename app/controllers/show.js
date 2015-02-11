@@ -19,7 +19,7 @@ function clickTab(e) {
 function setActionBarTitle() {
 	var m = Alloy.createModel('movie');
 	m.fetch({id: args.id});
-	$.win.setTitle(m.attributes.original_title);
+	$.win.setTitle(m.toJSON()[0].original_title);
 }
 
 function shareItem() {
