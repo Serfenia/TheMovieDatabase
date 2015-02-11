@@ -58,19 +58,23 @@
 "ListItem":{
 	height: 50,
 	color: "black",
+	selectedBackgroundColor: "#bbbbbb"
 }
 
 ".row":{
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
+	touchEnabled:false
 }
 	".image": {
 		left: 0,
 		width: 35,
-		height: Ti.UI.FILL
+		height: Ti.UI.FILL,
+		touchEnabled:false
 	}
 	
 	".title": {
+		touchEnabled:false,
 		left: 40,
 		width: "75%",
 		height: Ti.UI.FILL

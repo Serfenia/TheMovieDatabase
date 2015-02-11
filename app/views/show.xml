@@ -1,6 +1,7 @@
 <Alloy>
 	<Model src="movie" id="movie" instance="true" />
-	<Window class="container">
+	<Window id="win" class="container">
+		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
 		<RightNavButton platform="ios">
 			<Button systemButton="ACTION" onClick="shareItem" />
 		</RightNavButton>

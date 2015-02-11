@@ -1,3 +1,7 @@
+"ActionBar[platform=android]":{
+	displayHomeAsUp: true
+}
+
 "#searchView":{
 	width: Ti.UI.FILL,
 	height: 50
@@ -12,5 +16,6 @@
 		borderWidth: 1,
 		borderColor: Alloy.Globals.COLORS.MAIN_COLOR,
 		hintText: "Search for a movie",
-		tintColor: "#CCCCCC"
+		tintColor: "#CCCCCC",
+		showBookmark: true
 	}

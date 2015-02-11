@@ -60,10 +60,22 @@ function shareItem() {
 function watchTrailer() {
 	var trailers = JSON.parse($.movie.get("trailers"));
 	if(!_.isEmpty(trailers)) {
-		if(OS_IOS) {
-			/* Magics */
-		} else if(OS_ANDROID) {
-			Ti.Platform.openURL('http://www.youtube.com/watch?v=' + _.first().key);
+		var trailer = _.first(trailers);
+		switch(trailer.site.toLowerCase()) {
+			case "youtube": openYoutubeVideo(trailer.key); break;
+			default: ;
 		}
 	}
+}
+
+function openYoutubeVideo(key) {
+	if(OS_IOS) {
+	
+	} if(OS_ANDROID) {
+		Ti.Platform.openURL('http://www.youtube.com/watch?v=' + key);
+	}
+}
+
+function closeWindow() {
+	$.win.close();
 }
