@@ -2,6 +2,10 @@ var args = arguments[0] || {};
 
 $.cast_members.getCastByMovieId(args.id);
 
+/**
+ * Gets the credits of the movie with a GET request.
+ * @param id {Number} : The TMDB ID of the movie.
+ */
 function getCredits(id) {
 	var url = CFG["URLS"]["MOVIES"]["CREDITS"].replace("{id}", id) + G.URL_PARAMETERS.API_KEY;
 	var xhr = Ti.Network.createHTTPClient({
@@ -14,14 +18,12 @@ function getCredits(id) {
 				var response = xhr.responseText;
 				parseResponse(response);
 				$.cast_members.trigger('change');
-				G.info($.cast_members.models.length);
 			} catch(e) {
 				G.info(e);	
 			}
 		}
 	});
 	
-	G.info(url);
 	xhr.open("GET", url);
 	xhr.send();
 }
@@ -53,7 +55,8 @@ function saveModel(obj) {
 }
 
 /**
- * Transforms the model before it is displayed
+ * Transforms the model before it is displayed.
+ * 
  * @param model {Alloy Model} : The model
  */
 function transformModel(model) {

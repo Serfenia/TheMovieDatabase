@@ -12,7 +12,14 @@ function clickTab(e) {
 		tab.window.add(Alloy.createController("show/"+tab.title.toLowerCase(), {
 			id: args.id
 		}).getView());
+		setActionBarTitle();
 	}
+}
+
+function setActionBarTitle() {
+	var m = Alloy.createModel('movie');
+	m.fetch({id: args.id});
+	$.win.setTitle(m.attributes.original_title);
 }
 
 function shareItem() {

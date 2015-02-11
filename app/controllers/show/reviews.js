@@ -2,6 +2,10 @@ var args = arguments[0] || {};
 
 $.reviews.getReviewsByMovieId(args.id);
 
+/**
+ * Gets the reviews of the movie with a GET request.
+ * @param id {Number} : The TMDB ID of the movie.
+ */
 function getReviews(id) {
 	var url = CFG["URLS"]["MOVIES"]["REVIEWS"].replace("{id}", id) + G.URL_PARAMETERS.API_KEY;
 	var xhr = Ti.Network.createHTTPClient({
@@ -68,7 +72,6 @@ function transformModel(model) {
  * Opens the original post of the review by it's url
  */
 function openUrl(e) {
-	G.info(this.url);
 	Ti.Platform.openURL(this.url);
 }
 

@@ -19,7 +19,7 @@
 	    		text:text="This movie has no reviews." 
 	    		text:width="95%" />
 	    </ListSection>
-	    <ListSection dataCollection="$.reviews">
+	    <ListSection dataCollection="$.reviews" dataTransform="transformModel">
 	    	<ListItem author:text="{author}" content:text="{content}" url:url="{url}"/>
 	    </ListSection>
 	    <ListSection>
@@ -29,6 +29,6 @@
 	    		text:width="95%" 
 	    		text:color="#ababab" />
 	    </ListSection>
-	    <FooterView><View /></FooterView>
+	    <FooterView><View height="0" /></FooterView>
 	</ListView>
 </Alloy>

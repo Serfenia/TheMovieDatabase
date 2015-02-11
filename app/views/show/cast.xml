@@ -21,6 +21,6 @@
     		</HeaderView>
 	    	<ListItem name:text="{name}" character:text="{character}"/>
 	    </ListSection>
-	    <FooterView><View /></FooterView>
+	    <FooterView><View height="0" /></FooterView>
 	</ListView>
 </Alloy>

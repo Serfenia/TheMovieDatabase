@@ -1,5 +1,4 @@
 <Alloy>
-	<Model src="movie" id="movie" instance="true" />
 	<TabGroup id="win" class="container" onClick="clickTab">
 		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
 		<Tab title="Overview">

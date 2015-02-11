@@ -1,6 +1,7 @@
 "#list":{
 	height: Ti.UI.FILL,
-	contentHeight: Ti.UI.SIZE
+	contentHeight: Ti.UI.SIZE,
+	horizontalWrap: false
 }
 	
 	"#list[platform=ios]":{

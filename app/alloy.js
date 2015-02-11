@@ -77,3 +77,5 @@ var S = require("alloy/string");
  */
 var D = require("alloy/dialogs");
 
+G.json(CFG);
+
