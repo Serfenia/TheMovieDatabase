@@ -69,7 +69,9 @@ function watchTrailer() {
 }
 
 function openYoutubeVideo(key) {
-
+	if(OS_ANDROID) {
+		Ti.Platform.openURL('http://www.youtube.com/watch?v=' + key);
+	}
 }
 
 function toggleTrailerButton(array) {

@@ -1,3 +1,5 @@
+require('initializeDB');
+
 /**
  * Alloy CFG object.
  * Contains the data from the config.json
@@ -74,3 +76,4 @@ var S = require("alloy/string");
  * @type {Object}
  */
 var D = require("alloy/dialogs");
+

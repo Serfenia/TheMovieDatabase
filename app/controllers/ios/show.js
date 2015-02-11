@@ -21,5 +21,5 @@ function shareItem() {
 };
 
 clickTab({
-	index: $.tabbedBar.index
+	index: 0
 });

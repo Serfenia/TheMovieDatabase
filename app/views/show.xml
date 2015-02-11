@@ -1,18 +1,21 @@
 <Alloy>
 	<Model src="movie" id="movie" instance="true" />
-	<Window id="win" class="container">
+	<TabGroup id="win" class="container" onClick="clickTab">
 		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
-		<RightNavButton platform="ios">
-			<Button systemButton="ACTION" onClick="shareItem" />
-		</RightNavButton>
-		<ScrollView>
-			<Label id="title" text="{$.movie.original_title}" />
-			<ImageView id="image" image="{$.movie.poster_path}" />
-			
-			<Label id="overview" text="{$.movie.overview}" />
-			<Label id="rating" text="Beoordeling: {$.movie.vote_average}" />
-
-			<Button id="trailerBtn" visible="false" width="40%" left="2.5%" top="10" class="button" title="Watch Trailer" onClick="watchTrailer" />
-		</ScrollView>
-	</Window>
+		<Tab title="Overview">
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab title="Reviews">
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab title="Cast">
+			<Window>
+				
+			</Window>
+		</Tab>
+	</TabGroup>
 </Alloy>
