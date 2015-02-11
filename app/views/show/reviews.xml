@@ -1,6 +1,6 @@
 <Alloy>
 	<Collection id="reviews" src="review" instance="true" />
-	<ListView id="list" defaultItemTemplate="default">
+	<ListView id="list" defaultItemTemplate="default" visible="false">
 		<Templates>
 			<ItemTemplate name="default">
 				<View bindId="id" class="row">
@@ -29,5 +29,6 @@
 	    		text:width="95%" 
 	    		text:color="#ababab" />
 	    </ListSection>
+	    <FooterView><View /></FooterView>
 	</ListView>
 </Alloy>

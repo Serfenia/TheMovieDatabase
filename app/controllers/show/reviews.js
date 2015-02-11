@@ -12,9 +12,9 @@ function getReviews(id) {
 		onload: function onload(e) {
 			try {
 				var response = xhr.responseText;
-				G.info(response);
 				parseResponse(response);
 				$.reviews.trigger('change');
+				$.list.show();
 			} catch(e) {
 				G.info(e);	
 			}

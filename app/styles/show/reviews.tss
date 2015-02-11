@@ -1,8 +1,11 @@
 "#list":{
-	top:10,
 	height: Ti.UI.FILL,
 	contentHeight: Ti.UI.SIZE
 }
+	
+	"#list[platform=ios]":{
+		top:10
+	}
 
 
 "ListItem":{

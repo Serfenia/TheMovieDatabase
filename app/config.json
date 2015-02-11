@@ -8,6 +8,9 @@
       "MAIN_COLOR": "#0e83cd"
     },
     "URLS": {
+      "IMAGES": {
+        "POSTER": "http://image.tmdb.org/t/p/w500"
+      },
       "SEARCH": {
         "MOVIE": "http://api.themoviedb.org/3/search/movie"
       },
@@ -18,10 +21,8 @@
         "POPULAR": "http://api.themoviedb.org/3/movie/popular",
         "TOP_RATED": "http://api.themoviedb.org/3/movie/top_rated",
         "TRAILERS": "http://api.themoviedb.org/3/movie/{id}/videos",
-        "REVIEWS": "http://api.themoviedb.org/3/movie/{id}/reviews"
-      },
-      "IMAGES": {
-        "POSTER": "http://image.tmdb.org/t/p/w500"
+        "REVIEWS": "http://api.themoviedb.org/3/movie/{id}/reviews",
+        "CREDITS":"http://api.themoviedb.org/3/movie/{id}/credits"
       }
     },
     "TAB_PAGES": [

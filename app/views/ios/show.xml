@@ -7,7 +7,7 @@
 			<Labels>
                 <Label id="overview">Overview</Label>
                 <Label id="reviews">Reviews</Label>
-                <Label id="crew">Crew</Label>
+                <Label id="cast">Cast</Label>
             </Labels>
 		</TabbedBar>
 	</Window>

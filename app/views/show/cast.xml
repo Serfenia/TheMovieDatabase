@@ -1,0 +1,26 @@
+<Alloy>
+	<Collection id="cast_members" src="cast_member" instance="true" />
+	<ListView id="list" defaultItemTemplate="default">
+		<Templates>
+			<ItemTemplate name="default">
+				<View bindId="id" class="row">
+	                <Label bindId="name" width="50%" height="Ti.UI.FILL" />
+	                <Label bindId="character" width="50%" height="Ti.UI.FILL" />
+	        	</View>
+	        </ItemTemplate>
+	        <ItemTemplate name="label">
+                <Label bindId="text" />
+	        </ItemTemplate>
+	    </Templates>
+	    <ListSection dataCollection="$.cast_members">
+	    	<HeaderView>
+	    		<View id="header">
+	                <Label class="headerLabel" text="Name" left="2.5%" />
+	                <Label class="headerLabel" text="Character"  />
+	        	</View>
+    		</HeaderView>
+	    	<ListItem name:text="{name}" character:text="{character}"/>
+	    </ListSection>
+	    <FooterView><View /></FooterView>
+	</ListView>
+</Alloy>
