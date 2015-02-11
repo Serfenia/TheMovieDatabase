@@ -12,12 +12,13 @@
         "MOVIE": "http://api.themoviedb.org/3/search/movie"
       },
       "MOVIES": {
-        "ID": "http://api.themoviedb.org/3/movie/",
+        "ID": "http://api.themoviedb.org/3/movie/{id}",
         "NOW_PLAYING": "http://api.themoviedb.org/3/movie/now_playing",
         "UPCOMING": "http://api.themoviedb.org/3/movie/upcoming",
         "POPULAR": "http://api.themoviedb.org/3/movie/popular",
         "TOP_RATED": "http://api.themoviedb.org/3/movie/top_rated",
-        "TRAILERS": "http://api.themoviedb.org/3/movie/{id}/videos"
+        "TRAILERS": "http://api.themoviedb.org/3/movie/{id}/videos",
+        "REVIEWS": "http://api.themoviedb.org/3/movie/{id}/reviews"
       },
       "IMAGES": {
         "POSTER": "http://image.tmdb.org/t/p/w500"

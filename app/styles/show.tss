@@ -1,29 +1,3 @@
 "ActionBar[platform=android]":{
 	displayHomeAsUp: true
 }
-
-
-"Label": {
-	width: "95%",
-	height: Ti.UI.SIZE,
-	font: {
-		fontSize: 13
-	}
-}
-
-"ImageView": {
-	left: "2.5%",
-	width: "30%",
-	height: Ti.UI.SIZE
-}
-
-"#title": {
-	font: {
-		fontSize: 14,
-		fontWeight: 'bold'
-	}
-}
-
-"#rating": {
-	top: 10
-}

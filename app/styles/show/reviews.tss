@@ -1,0 +1,55 @@
+"#list":{
+	top:10,
+	height: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE
+}
+
+
+"ListItem":{
+	height: Ti.UI.SIZE
+}
+	
+	"ListItem[platform=ios]":{
+		selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
+	}
+
+".row":{
+	top: 5,
+	width: "95%",
+	height: Ti.UI.SIZE,
+	layout: 'vertical',
+	touchEnabled:true
+}
+
+	".author":{
+		width: Ti.UI.FILL,
+		font: {
+			fontSize: 14,
+			fontWeight: "bold",
+		},
+		textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+	}
+	
+		".author[platform=ios]":{
+			font: {
+				textStyle: Ti.UI.TEXT_STYLE_HEADLINE
+			}
+		}
+	
+	".content":{
+		width: Ti.UI.FILL,
+		height: Ti.UI.SIZE
+	}
+	
+		".content[platform=ios]":{
+			font: {
+				fontStyle: 'italic'
+			}
+		}
+	
+	".button":{
+		left: 0,
+		width: '40%',
+		top: 5,
+		bottom: 5
+	}

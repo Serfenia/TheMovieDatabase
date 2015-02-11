@@ -1,0 +1,14 @@
+<Alloy>
+	<Window id="win" class="container">
+		<RightNavButton>
+			<Button systemButton="ACTION" onClick="shareItem" />
+		</RightNavButton>
+		<TabbedBar id="tabbedBar" onClick="clickTab">
+			<Labels>
+                <Label id="overview">Overview</Label>
+                <Label id="reviews">Reviews</Label>
+                <Label id="crew">Crew</Label>
+            </Labels>
+		</TabbedBar>
+	</Window>
+</Alloy>

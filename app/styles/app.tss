@@ -33,6 +33,14 @@
 	backgroundColor: 'white'
 }
 
+/* 
+ * iOS Tabbed bar
+ */
+"TabbedBar[platform=ios]":{
+	top: 5,
+	tintColor: Alloy.Globals.COLORS.MAIN_COLOR,
+	index: 0
+}
 /**
  * 	Default label
  */

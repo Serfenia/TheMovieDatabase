@@ -1,0 +1,33 @@
+<Alloy>
+	<Collection id="reviews" src="review" instance="true" />
+	<ListView id="list" defaultItemTemplate="default">
+		<Templates>
+			<ItemTemplate name="default">
+				<View bindId="id" class="row">
+	                <Label bindId="author" class="author"/>
+	                <Label bindId="content" class="content" />
+	                <Button bindId="url" class="button" title="View Original" onClick="openUrl" />
+	        	</View>
+	        </ItemTemplate>
+	        <ItemTemplate name="label">
+                <Label bindId="text" />
+	        </ItemTemplate>
+	    </Templates>
+	    <ListSection id="">
+	    	<ListItem 
+	    		template="label" 
+	    		text:text="This movie has no reviews." 
+	    		text:width="95%" />
+	    </ListSection>
+	    <ListSection dataCollection="$.reviews">
+	    	<ListItem author:text="{author}" content:text="{content}" url:url="{url}"/>
+	    </ListSection>
+	    <ListSection>
+	    	<ListItem 
+	    		template="label" 
+	    		text:text="The thoughts and opinions expressed in these reviews are those solely of the user."
+	    		text:width="95%" 
+	    		text:color="#ababab" />
+	    </ListSection>
+	</ListView>
+</Alloy>

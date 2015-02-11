@@ -1,0 +1,35 @@
+"#scrollView":{
+	width: '95%'
+}
+
+"Label": {
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 13
+	}
+}
+
+"ImageView": {
+	left: 0,
+	width: '30%',
+	height: Ti.UI.SIZE
+}
+
+"#title": {
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	}
+}
+
+"#rating": {
+	top: 10
+}
+
+"#trailerBtn":{
+	left: 0,
+	visible: false,
+	width: '40%',
+	top: '10'  
+}
