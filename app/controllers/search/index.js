@@ -13,7 +13,8 @@ if(OS_ANDROID) {
 	require("com.alcoapps.actionbarextras").setSearchView({
 		searchView: searchView,
 		textColor: 'white',
-		hintColor: 'white'
+		hintColor: 'white',
+		icon: "/images/ic_search_white_48dp.png"
 	});
 	
 	$.win.activity.onCreateOptionsMenu = function(e) {

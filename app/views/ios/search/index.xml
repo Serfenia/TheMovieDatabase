@@ -1,11 +1,13 @@
 <Alloy>
 	<Collection id="movies" src="movie" instance="true" />
 	<NavigationWindow id="win">
-		<Window title="Search movie">
+		<Window>
 			<LeftNavButton>
 				<Button title="Back" onClick="closeWindow" />
 			</LeftNavButton>
-			<SearchBar id="searchView" onReturn="search" />
+			<TitleControl>
+				<SearchBar id="searchView" onReturn="search" />
+			</TitleControl>
 			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="search">
 				<ListView defaultItemTemplate="default" onItemclick="showMovie">
 					<Templates>

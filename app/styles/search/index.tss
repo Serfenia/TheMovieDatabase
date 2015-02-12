@@ -4,7 +4,7 @@
 
 "#searchView":{
 	width: Ti.UI.FILL,
-	height: 50
+	height: 27
 }
 	
 	"#searchView[platform=android]":{
@@ -13,8 +13,6 @@
 	
 	"#searchView[platform=ios]":{
 		barColor: Alloy.Globals.COLORS.MAIN_COLOR,
-		borderWidth: 1,
-		borderColor: Alloy.Globals.COLORS.MAIN_COLOR,
 		hintText: "Search for a movie",
 		tintColor: "#CCCCCC",
 		showBookmark: true
