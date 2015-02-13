@@ -80,9 +80,7 @@ function watchTrailer() {
 }
 
 function openYoutubeVideo(key) {
-	if(OS_ANDROID) {
-		Ti.Platform.openURL('http://www.youtube.com/watch?v=' + key);
-	}
+	Ti.Platform.openURL('http://www.youtube.com/embed/' + key + '?autoplay=1&autohide=1&cc_load_policy=0&color=white&controls=0&fs=0&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0');
 }
 
 function toggleTrailerButton(array) {

@@ -6,6 +6,7 @@
 		<ImageView id="image" image="{$.movie.poster_path}" />
 		<Label id="rating" text="Rating: {$.movie.vote_average}" />
 
+		<Label top="10" text="Synopsis:" />
 		<Label id="content" text="{$.movie.overview}" />
 		
 		
