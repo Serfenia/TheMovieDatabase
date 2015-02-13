@@ -1,5 +1,5 @@
 "ActionBar[platform=android]":{
-	displayHomeAsUp: true
+	icon: "/images/ic_arrow_back_white_24dp.png"
 }
 
 "#searchView":{

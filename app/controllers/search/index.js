@@ -10,12 +10,6 @@ if(OS_ANDROID) {
 		ns: "Ti.UI.Android"
 	});
 	searchView.addEventListener("submit", search);
-	require("com.alcoapps.actionbarextras").setSearchView({
-		searchView: searchView,
-		textColor: 'white',
-		hintColor: 'white',
-		icon: "/images/ic_search_white_48dp.png"
-	});
 	
 	$.win.activity.onCreateOptionsMenu = function(e) {
 	    var menu = e.menu;

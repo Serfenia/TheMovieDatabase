@@ -1,7 +1,7 @@
 <Alloy>
 	<TabGroup id="application">
 		<Menu platform="android">
-			<MenuItem id="search" onClick="openSearch" />
+			<MenuItem id="search" onClick="openSearch" title="Search Movie" />
 		</Menu>
 		<Require src="nowplaying/index" />
 		<Require src="upcoming/index" />

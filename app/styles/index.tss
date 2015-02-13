@@ -1,4 +1,4 @@
 "#search[platform=android]":{
-	icon: "/images/ic_search_white_48dp.png",
-	showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
+	icon: "/images/ic_search_white_24dp.png",
+	showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS,
 }
