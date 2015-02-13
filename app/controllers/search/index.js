@@ -11,9 +11,15 @@ if(OS_ANDROID) {
 	});
 	searchView.addEventListener("submit", search);
 	
-	$.win.activity.onCreateOptionsMenu = function(e) {
-	    var menu = e.menu;
-	    var menuItem = menu.add({
+	$.win.activity.onCreateOptionsMenu = function(e) {    
+    	require("com.alcoapps.actionbarextras").setSearchView({
+			searchView: searchView,
+			textColor: 'white',
+			hintColor: 'white',
+			searchIcon: "/images/ic_search_white_24dp.png"
+		});
+		
+		e.menu.add({
 	        title: 'Search movie',
 	        actionView : searchView,
 	        showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS

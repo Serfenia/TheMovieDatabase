@@ -2,11 +2,13 @@
 	<Model src="movie" id="movie" instance="true" />
 	<ScrollView id="scrollView">
 		<Label id="title" text="{$.movie.original_title}" />
+		<Label id="genres" text="{$.movie.genres}" />
 		<ImageView id="image" image="{$.movie.poster_path}" />
-		
-		<Label id="content" text="{$.movie.overview}" />
 		<Label id="rating" text="Rating: {$.movie.vote_average}" />
 
+		<Label id="content" text="{$.movie.overview}" />
+		
+		
 		<Button id="trailerBtn" class="button" title="Watch Trailer" onClick="watchTrailer" />
 	</ScrollView>
 </Alloy>

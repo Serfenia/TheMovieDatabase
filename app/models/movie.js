@@ -4,6 +4,7 @@ exports.definition = {
 		    "id": "PRIMARY KEY INTEGER",
 		    "original_title": "TEXT",
 		    "overview": "TEXT",
+			"genres": "TEXT",
 		    "poster_path":"TEXT",
 		    "vote_average": "REAL",
 		    "vote_count": "INTEGER",

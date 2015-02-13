@@ -15,5 +15,6 @@
 		barColor: Alloy.Globals.COLORS.MAIN_COLOR,
 		hintText: "Search for a movie",
 		tintColor: "#CCCCCC",
-		showBookmark: true
+		showBookmark: true,
+		borderRadius: 5
 	}

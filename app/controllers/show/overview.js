@@ -18,6 +18,9 @@ function getMovie(id) {
 		onload: function onload(e) {
 			try {
 				var response = JSON.parse(xhr.responseText);
+				if(!_.isEmpty(response.genres)){
+					response.genres = stringifyGenres(response.genres);
+				}
 				response.poster_path = response.poster_path ? CFG["URLS"]["IMAGES"]["POSTER"] + response.poster_path : "";
 				$.movie.set(response);
 				$.movie.save();
@@ -31,6 +34,14 @@ function getMovie(id) {
 	
 	xhr.open("GET", url);
 	xhr.send();
+}
+
+function stringifyGenres(genres) {
+	var stringifiedGenres = "Genres: ";
+	_.each(genres, function(genre) {
+		stringifiedGenres += genre.name + ", ";
+	});
+	return stringifiedGenres.substring(0, stringifiedGenres.length-2);
 }
 
 function getTrailerInfo(id) {

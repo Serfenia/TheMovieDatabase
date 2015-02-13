@@ -24,7 +24,6 @@
 }
 
 "#rating": {
-	top: 10
 }
 
 "#trailerBtn":{

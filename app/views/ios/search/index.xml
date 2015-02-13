@@ -22,6 +22,7 @@
 					<ListSection dataCollection="$.movies">
 						<ListItem id:id="{id}" title:text="{title}" image:image="{poster_path}"></ListItem>
 					</ListSection>
+					<FooterView><View height="0" /></FooterView>
 				</ListView>
 			</Widget>
 		</Window>
