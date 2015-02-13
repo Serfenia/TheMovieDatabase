@@ -1,0 +1,4 @@
+"#tab[platform=ios]":{
+	icon: "/images/world_times.png",
+	iconIsMask:true
+}

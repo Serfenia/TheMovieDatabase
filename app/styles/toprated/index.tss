@@ -1,0 +1,4 @@
+"#tab[platform=ios]":{
+	icon: "/images/favorites.png",
+	iconIsMask:true
+}

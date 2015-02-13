@@ -1,0 +1,4 @@
+"#tab[platform=ios]":{
+	icon: "/images/top_charts.png",
+	iconIsMask:true
+}
