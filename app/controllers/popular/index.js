@@ -67,7 +67,7 @@ function showMovie(e) {
 	} else if(OS_ANDROID) {
 		$.tab.open(Alloy.createController("show", {
 			id: $.movies.models[e.itemIndex].attributes.id
-		}.getView()));
+		}).getView());
 	}
 };
 
