@@ -9,15 +9,21 @@ function closeWindow() {
 function clickTab(e) {
 	if(e.index !== currentTab) {
 		currentTab !== undefined && $.win.remove(_.last($.win.children));
-		$.win.add(Alloy.createController("show/"+$.tabbedBar.labels[e.index].title.toLowerCase(), {
+		var ctrl = Alloy.createController("show/"+$.tabbedBar.labels[e.index].title.toLowerCase(), {
 			id: args.id
-		}).getView());
+		});
+		ctrl.on('openWindow', openWindow);
+		$.win.add(ctrl.getView());
 		currentTab = e.index;
 	}
 }
 
 function shareItem() {
 	
+};
+
+function openWindow(e) {
+	$.trigger('openWindow', {url: 'people/credit', data: e});
 };
 
 clickTab({

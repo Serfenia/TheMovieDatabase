@@ -64,6 +64,15 @@ function transformModel(model) {
 	return m;
 }
 
+/**
+ * Shows the actor in the cast in a detailed view.
+ * @param {Object} e
+ */
+function showActor(e) {
+	var model = $.cast_members.models[e.itemIndex];
+	$.trigger('openWindow', {id: model.get('credit_id')});
+}
+
 if(G.hasInternet()) {
 	getCredits(args.id);
 }

@@ -9,9 +9,11 @@ function closeWindow() {
 function clickTab(e) {
 	var tab = $.win.activeTab || $.win.tabs[0];
 	if(tab.window.children.length === 0) {
-		tab.window.add(Alloy.createController("show/"+tab.title.toLowerCase(), {
+		var ctrl = Alloy.createController("show/"+tab.title.toLowerCase(), {
 			id: args.id
-		}).getView());
+		});
+		ctrl.on('openWindow', openWindow);
+		tab.window.add(ctrl.getView());
 		setActionBarTitle();
 	}
 }
@@ -24,6 +26,10 @@ function setActionBarTitle() {
 
 function shareItem() {
 	
+};
+
+function openWindow(e) {
+	Alloy.createController('people/credit', e).getView().open();
 };
 
 clickTab();

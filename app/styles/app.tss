@@ -21,13 +21,13 @@
 /**
  * 	Tabgroup specific
  */
-"TabGroup[platform=android]":{
-	tabsBackgroundColor: 'white'
-}
-
-"TabGroup[platform=ios]":{
-	tabsTintColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR
-}
+	"TabGroup[platform=android]":{
+		tabsBackgroundColor: 'white'
+	}
+	
+	"TabGroup[platform=ios]":{
+		tabsTintColor: Alloy.Globals.COLORS.ACTION_BAR_COLOR
+	}
 
 "Tab":{
 	backgroundColor: 'white'
