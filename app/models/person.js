@@ -1,6 +1,8 @@
 exports.definition = {
 	config: {
 		columns: {
+			name: "TEXT",
+			biography: "TEXT",
 			id: "INTEGER"
 		},
 		adapter: {

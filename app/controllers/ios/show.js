@@ -23,7 +23,7 @@ function shareItem() {
 };
 
 function openWindow(e) {
-	$.trigger('openWindow', {url: 'people/credit', data: e});
+	$.trigger('openWindow', {url: 'people/person', data: e});
 };
 
 clickTab({

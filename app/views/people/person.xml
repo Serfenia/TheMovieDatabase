@@ -1,0 +1,9 @@
+<Alloy>
+	<Model id="personModel" src="person" instance="true" />
+	<Window id="win">
+		<ScrollView>
+			<Label text="{$.personModel.name}" />
+			<Label text="{$.personModel.biography}" />
+		</ScrollView>
+	</Window>
+</Alloy>

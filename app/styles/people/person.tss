@@ -1,0 +1,8 @@
+"ScrollView":{
+	width: '95%'
+}
+
+"Label":{
+	width: Ti.UI.FILL,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}

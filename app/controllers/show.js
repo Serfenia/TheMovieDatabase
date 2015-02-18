@@ -29,7 +29,7 @@ function shareItem() {
 };
 
 function openWindow(e) {
-	Alloy.createController('people/credit', e).getView().open();
+	Alloy.createController('people/person', e).getView().open();
 };
 
 clickTab();

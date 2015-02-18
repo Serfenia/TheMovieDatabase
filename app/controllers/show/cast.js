@@ -70,7 +70,7 @@ function transformModel(model) {
  */
 function showActor(e) {
 	var model = $.cast_members.models[e.itemIndex];
-	$.trigger('openWindow', {id: model.get('credit_id')});
+	$.trigger('openWindow', {id: model.get('id')});
 }
 
 if(G.hasInternet()) {

@@ -23,6 +23,12 @@
         "TRAILERS": "http://api.themoviedb.org/3/movie/{id}/videos",
         "REVIEWS": "http://api.themoviedb.org/3/movie/{id}/reviews",
         "CREDITS":"http://api.themoviedb.org/3/movie/{id}/credits"
+      },
+      "CREDITS":{
+      	"ID": "http://api.themoviedb.org/3/credit/{id}"
+      },
+      "PEOPLE":{
+      	"ID": "http://api.themoviedb.org/3/person/{id}"
       }
     },
     "TAB_PAGES": [
