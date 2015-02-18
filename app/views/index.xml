@@ -7,5 +7,6 @@
 		<Require src="upcoming/index" />
 		<Require src="popular/index" />
 		<Require src="toprated/index" />
+		<Require src="genres/index" />
 	</TabGroup>
 </Alloy>

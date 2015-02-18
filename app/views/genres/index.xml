@@ -1,0 +1,9 @@
+<Alloy>
+	<Tab id="tab" title="Genres">
+		<Window id="win" title="Genres">
+			<RightNavButtons platform="ios">
+                <Button class="searchButton" onClick="openSearch" />
+            </RightNavButtons>
+		</Window>
+	</Tab>
+</Alloy>
