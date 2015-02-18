@@ -16,13 +16,6 @@
 	height: Ti.UI.SIZE
 }
 
-"#title": {
-	font: {
-		fontSize: 14,
-		fontWeight: 'bold'
-	}
-}
-
 "#rating": {
 }
 
@@ -31,10 +24,4 @@
 	visible: false,
 	width: '40%',
 	top: '10'  
-}
-
-"#content":{
-	font: {
-		fontStyle: 'italic'
-	}
 }

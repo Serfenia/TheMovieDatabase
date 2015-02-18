@@ -6,7 +6,7 @@ function closeWindow() {
 	$.destroy();
 }
 
-function clickTab(e) {
+function clickTab() {
 	var tab = $.win.activeTab || $.win.tabs[0];
 	if(tab.window.children.length === 0) {
 		var ctrl = Alloy.createController("show/"+tab.title.toLowerCase(), {

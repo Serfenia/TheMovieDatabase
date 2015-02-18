@@ -31,8 +31,17 @@ function getPerson(id) {
  */
 function parsePerson(responseText) {
 	var response = JSON.parse(responseText);
+	response.profile_path = response.profile_path ? CFG["URLS"]["IMAGES"]["PROFILE"] + response.profile_path : "";
+	response.biography = response.biography || "Unknown";
 	$.personModel.set(response);
 	$.personModel.save();
+}
+
+/**
+ * Closes the person window
+ */
+function closeWindow() {
+	$.win.close();
 }
 
 args.id && getPerson(args.id);

@@ -3,6 +3,8 @@ exports.definition = {
 		columns: {
 			name: "TEXT",
 			biography: "TEXT",
+			birthday: "TEXT",
+			profile_path: "TEXT",
 			id: "INTEGER"
 		},
 		adapter: {

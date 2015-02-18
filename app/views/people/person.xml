@@ -1,8 +1,14 @@
 <Alloy>
 	<Model id="personModel" src="person" instance="true" />
-	<Window id="win">
+	<Window id="win" title="{$.personModel.name}">
+		<ActionBar onHomeIconItemSelected="closeWindow" platform="android" />
 		<ScrollView>
-			<Label text="{$.personModel.name}" />
+			<Label id="title" text="{$.personModel.name}" />
+			<ImageView image="{$.personModel.profile_path}" />
+
+			<Label class="italic" text="{$.personModel.birthday}" />
+			
+			<Label top="10" text="Biography:" />
 			<Label text="{$.personModel.biography}" />
 		</ScrollView>
 	</Window>

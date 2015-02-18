@@ -1,3 +1,8 @@
+"ActionBar[platform=android]":{
+	logo: "/images/ic_arrow_back_white_24dp.png",
+	homeButtonEnabled: true
+}
+
 "ScrollView":{
 	width: '95%'
 }
@@ -5,4 +10,9 @@
 "Label":{
 	width: Ti.UI.FILL,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+
+"ImageView":{
+	left: 0,
+	width: '50%'
 }

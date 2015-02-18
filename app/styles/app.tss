@@ -108,6 +108,19 @@
 		systemButton: Ti.UI.iPhone.SystemButton.SEARCH
 	}
 
+/* Styles for show actions */
+"#title": {
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	}
+}
+
+".italic":{
+	font: {
+		fontStyle: 'italic'
+	}
+}
 
 
 

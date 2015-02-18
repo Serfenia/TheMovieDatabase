@@ -7,7 +7,7 @@
 		<Label id="rating" text="Rating: {$.movie.vote_average}" />
 
 		<Label top="10" text="Synopsis:" />
-		<Label id="content" text="{$.movie.overview}" />
+		<Label class="italic" text="{$.movie.overview}" />
 		
 		
 		<Button id="trailerBtn" class="button" title="Watch Trailer" onClick="watchTrailer" />
