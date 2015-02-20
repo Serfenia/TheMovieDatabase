@@ -2,9 +2,9 @@
 	<Collection id="movies" src="movie" instance="true" />
 	<Tab id="tab" title="Releases">
 		<Window id="win" title="Releases">
-			<RightNavButtons platform="ios">
+			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />
-            </RightNavButtons>
+            </RightNavButton>
 			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getNowPlayingMovies">
 				<ListView defaultItemTemplate="default" onItemclick="showMovie">
 					<Templates>

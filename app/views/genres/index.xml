@@ -1,9 +1,10 @@
 <Alloy>
+	<Collection id="movies" src="movie" instance="true" />
 	<Tab id="tab" title="Genres">
 		<Window id="win" title="Genres">
-			<RightNavButtons platform="ios">
+			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />
-            </RightNavButtons>
+            </RightNavButton>
 		</Window>
 	</Tab>
 </Alloy>
