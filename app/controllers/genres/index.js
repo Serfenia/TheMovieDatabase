@@ -1,25 +1,26 @@
 var args = arguments[0] || {};
 
+$.movie_genres.fetch();
+
 /**
  * Saves the model to the local database.
  * Edits the poster path with a prefix of the image URL as specified in the config.
  * @param obj {Object} : A movie retrieved from TMDB as JSON
  */
 function saveModel(obj) {
-	var model = Alloy.createModel('movie');
-	obj.poster_path = obj.poster_path ? CFG["URLS"]["IMAGES"]["POSTER"] + obj.poster_path : "";
+	var model = Alloy.createModel('genre');
 	model.save(obj);
 	return model;
 }
 
 /**
- * Parses the response text by saving the model and adding it to the movie collection
- * @param responseText {String} : The upcoming movies in a stringified JSON format. 
+ * Parses the response text by saving the model and adding it to the movie genres collection
+ * @param responseText {String} : The genres in a stringified JSON format. 
  */
 function parseResponse(responseText) {
 	var response = JSON.parse(responseText);			
-	_.each(response.results, function(movie) {
-		$.movies.add(saveModel(movie), {silent:true});
+	_.each(response.genres, function(genre) {
+		$.movie_genres.add(saveModel(genre), {silent:true});
 	});
 }
 
@@ -27,9 +28,9 @@ function parseResponse(responseText) {
  * Retrieves the upcoming movies from TMDB with an HTTPClient if the device has an internet connection.
  * @see http://docs.themoviedb.apiary.io/#reference/movies/movieupcoming
  */
-function getNowPlayingMovies() {
+function getMovieGenres() {
 	if(G.hasInternet()) {
-		var url = CFG["URLS"]["MOVIES"]["NOW_PLAYING"] + G.URL_PARAMETERS.API_KEY;
+		var url = CFG["URLS"]["GENRES"]["MOVIES"] + G.URL_PARAMETERS.API_KEY;
 		var xhr = Ti.Network.createHTTPClient({
 			timeout: 10000,
 			onerror: function onerror(e) {
@@ -38,8 +39,7 @@ function getNowPlayingMovies() {
 			onload: function onload(e) {
 				try {
 					parseResponse(this.responseText);
-					$.movies.trigger('change');
-					$.ptr.hide();
+					$.movie_genres.trigger('change');
 				} catch(e) {
 					G.info(e);	
 				}
@@ -53,21 +53,23 @@ function getNowPlayingMovies() {
 	}
 }
 
-
 /**
  * Shows the selected movie in a show view.
  * @param {Object} e : The event object containing information about which item is clicked.
  */
-function showMovie(e) {
+function showGenre(e) {
+	var genreAttributes = $.movie_genres.models[e.itemIndex].attributes;
 	if(OS_IOS) {
-		var ctrl = Alloy.createController("show", {
-			id: $.movies.models[e.itemIndex].attributes.id
+		var ctrl = Alloy.createController("genres/show", {
+			id: genreAttributes.id,
+			name: genreAttributes.name
 		});
 		ctrl.on('openWindow', openWindow);
 		$.tab.open(ctrl.getView());
 	} else if(OS_ANDROID) {
-		$.tab.open(Alloy.createController("show", {
-			id: $.movies.models[e.itemIndex].attributes.id
+		$.tab.open(Alloy.createController("genres/show", {
+			id: genreAttributes.id,
+			name: genreAttributes.name
 		}).getView());
 	}
 };
@@ -88,4 +90,5 @@ function openSearch() {
 	Alloy.createController("search/index");
 }
 
-getNowPlayingMovies();
+if(_.isEmpty($.movie_genres.models))
+	getMovieGenres();

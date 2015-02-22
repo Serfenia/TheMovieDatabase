@@ -14,6 +14,7 @@ function clickTab(e) {
 		});
 		ctrl.on('openWindow', openWindow);
 		$.win.add(ctrl.getView());
+		$.win.setTitle(args.original_title);
 		currentTab = e.index;
 	}
 }

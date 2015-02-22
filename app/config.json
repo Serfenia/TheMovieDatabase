@@ -15,6 +15,10 @@
       "SEARCH": {
         "MOVIE": "http://api.themoviedb.org/3/search/movie"
       },
+      "GENRES":{
+      	"MOVIES": "http://api.themoviedb.org/3/genre/movie/list",
+      	"ID_MOVIES": "http://api.themoviedb.org/3/genre/{id}/movies"
+      },
       "MOVIES": {
         "ID": "http://api.themoviedb.org/3/movie/{id}",
         "NOW_PLAYING": "http://api.themoviedb.org/3/movie/now_playing",

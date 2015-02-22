@@ -1,10 +1,24 @@
 <Alloy>
-	<Collection id="movies" src="movie" instance="true" />
+	<Collection id="movie_genres" src="genre" instance="true" />
 	<Tab id="tab" title="Genres">
 		<Window id="win" title="Genres">
 			<RightNavButton platform="ios">
                 <Button class="searchButton" onClick="openSearch" />
             </RightNavButton>
+         	<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getMovieGenres">
+				<ListView defaultItemTemplate="default" onItemclick="showGenre">
+					<Templates>
+						<ItemTemplate name="default">
+							<View bindId="id" class="row">
+				                <Label left="5%" bindId="title" class="title" />
+			            	</View>
+			            </ItemTemplate>
+			        </Templates>
+					<ListSection dataCollection="$.movie_genres">
+						<ListItem id:id="{id}" title:text="{name}" />
+					</ListSection>
+				</ListView>
+			</Widget>
 		</Window>
 	</Tab>
 </Alloy>

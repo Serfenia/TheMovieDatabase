@@ -1,0 +1,9 @@
+"ActionBar[platform=android]":{
+	logo: "/images/ic_arrow_back_white_24dp.png",
+	homeButtonEnabled: true
+}
+
+"#share":{
+	showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS,
+	icon: "/images/ic_share_white_24dp.png"
+}

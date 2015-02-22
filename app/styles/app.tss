@@ -1,4 +1,4 @@
-		"NavigationWindow[platform=ios]":{
+	"NavigationWindow[platform=ios]":{
 		tintColor: "white"
 	}
 
@@ -15,7 +15,8 @@
 		navTintColor: 'white',
 		titleAttributes: {
 			color: 'white'
-		}
+		},
+		backButtonTitle: ''
 	}
 	
 /**

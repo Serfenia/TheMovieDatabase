@@ -81,14 +81,18 @@ function findMovie(query) {
 var showMovie = function(e) {};
 if(OS_IOS) {
 	var showMovie = function(e) {
-		$.win.openWindow(Alloy.createController("show", {
-			id: $.movies.models[e.itemIndex].attributes.id
+		var movieAttributes = $.movies.models[e.itemIndex].attributes;
+		$.win.openWindow(Alloy.createController("movie/show", {
+			id: movieAttributes.id,
+			original_title: movieAttributes.original_title
 		}).getView());
 	};
 } else if(OS_ANDROID) {
 	var showMovie = function(e) {
-		Alloy.createController("show", {
-			id: $.movies.models[e.itemIndex].attributes.id
+		var movieAttributes = $.movies.models[e.itemIndex].attributes;
+		Alloy.createController("movie/show", {
+			id: movieAttributes.id,
+			original_title: movieAttributes.original_title
 		}).getView().open();
 	};
 }

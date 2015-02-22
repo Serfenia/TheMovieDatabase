@@ -1,23 +1,21 @@
 <Alloy>
-	<TabGroup id="win" class="container" onClick="clickTab">
+	<Collection id="movies" src="movie" instance="true" />
+	<Window id="win" class="container">
 		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
-		<Menu platform="android">
-			<MenuItem id="share"></MenuItem>
-		</Menu>
-		<Tab title="Overview">
-			<Window>
-				
-			</Window>
-		</Tab>
-		<Tab title="Reviews">
-			<Window>
-				
-			</Window>
-		</Tab>
-		<Tab title="Cast">
-			<Window>
-				
-			</Window>
-		</Tab>
-	</TabGroup>
+		<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="getMoviesByGenre">
+			<ListView defaultItemTemplate="default" onItemclick="showMovie">
+				<Templates>
+					<ItemTemplate name="default">
+						<View bindId="id" class="row">
+			                <ImageView bindId="image" class="image" />
+			                <Label bindId="title" class="title" />
+		            	</View>
+		            </ItemTemplate>
+		        </Templates>
+				<ListSection dataCollection="$.movies">
+					<ListItem id:id="{id}" title:text="{title}" image:image="{poster_path}"></ListItem>
+				</ListSection>
+			</ListView>
+		</Widget>
+	</Window>
 </Alloy>

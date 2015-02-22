@@ -1,4 +1,3 @@
-
 /**
  * Saves the model to the local database.
  * Edits the poster path with a prefix of the image URL as specified in the config.
@@ -58,19 +57,21 @@ function getPopularMovies() {
  * @param {Object} e : The event object containing information about which item is clicked.
  */
 function showMovie(e) {
+	var movieAttributes = $.movies.models[e.itemIndex].attributes;
 	if(OS_IOS) {
-		var ctrl = Alloy.createController("show", {
-			id: $.movies.models[e.itemIndex].attributes.id
+		var ctrl = Alloy.createController("show/movie", {
+			id: movieAttributes.id,
+			original_title: movieAttributes.original_title
 		});
 		ctrl.on('openWindow', openWindow);
 		$.tab.open(ctrl.getView());
 	} else if(OS_ANDROID) {
-		$.tab.open(Alloy.createController("show", {
-			id: $.movies.models[e.itemIndex].attributes.id
+		$.tab.open(Alloy.createController("show/movie", {
+			id: movieAttributes.id,
+			original_title: movieAttributes.original_title
 		}).getView());
 	}
 };
-
 /**
  * Opens the window based on the given url and data
  */

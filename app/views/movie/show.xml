@@ -1,0 +1,23 @@
+<Alloy>
+	<TabGroup id="win" class="container" onClick="clickTab">
+		<ActionBar platform="android" onHomeIconItemSelected="closeWindow" />
+		<Menu platform="android">
+			<MenuItem id="share"></MenuItem>
+		</Menu>
+		<Tab title="Overview">
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab title="Reviews">
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab title="Cast">
+			<Window>
+				
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>

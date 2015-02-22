@@ -1,5 +1,7 @@
 var args = arguments[0] || {};
 
+$.win.setTitle(args.name);
+
 /**
  * Saves the model to the local database.
  * Edits the poster path with a prefix of the image URL as specified in the config.
@@ -27,9 +29,9 @@ function parseResponse(responseText) {
  * Retrieves the upcoming movies from TMDB with an HTTPClient if the device has an internet connection.
  * @see http://docs.themoviedb.apiary.io/#reference/movies/movieupcoming
  */
-function getNowPlayingMovies() {
+function getMoviesByGenre() {
 	if(G.hasInternet()) {
-		var url = CFG["URLS"]["MOVIES"]["NOW_PLAYING"] + G.URL_PARAMETERS.API_KEY;
+		var url = CFG["URLS"]["GENRES"]["ID_MOVIES"].replace("{id}", args.id) + G.URL_PARAMETERS.API_KEY;
 		var xhr = Ti.Network.createHTTPClient({
 			timeout: 10000,
 			onerror: function onerror(e) {
@@ -58,37 +60,38 @@ function getNowPlayingMovies() {
  * Shows the selected movie in a show view.
  * @param {Object} e : The event object containing information about which item is clicked.
  */
-function showMovie(e) {
-	var movieAttributes = $.movies.models[e.itemIndex].attributes;
-	if(OS_IOS) {
-		var ctrl = Alloy.createController("movie/show", {
-			id: movieAttributes.id,
-			original_title: movieAttributes.original_title
+var showMovie = function(e) {};
+if(OS_IOS) {
+	var showMovie = function(e) {
+		var movieAttributes = $.movies.models[e.itemIndex].attributes;
+		$.trigger('openWindow', {
+			url: 'movie/show',
+			data: {
+				id: movieAttributes.id,
+				original_title: movieAttributes.original_title
+			}
 		});
-		ctrl.on('openWindow', openWindow);
-		$.tab.open(ctrl.getView());
-	} else if(OS_ANDROID) {
-		$.tab.open(Alloy.createController("movie/show", {
+	};
+} else if(OS_ANDROID) {
+	var showMovie = function(e) {
+		var movieAttributes = $.movies.models[e.itemIndex].attributes;
+		Alloy.createController("movie/show", {
 			id: movieAttributes.id,
 			original_title: movieAttributes.original_title
-		}).getView());
-	}
-};
+		}).getView().open();
+	};
+}
 
 /**
  * Opens the window based on the given url and data
  */
 function openWindow(e) {
-	$.tab.open(Alloy.createController(e.url, e.data).getView());
+	$.trigger('openWindow', e);
 }
 
-
-/**
- * Create the index controller of the search page.
- * Fired when clicked on the rightNavButton in this view.
- */
-function openSearch() {
-	Alloy.createController("search/index");
+function closeWindow() {
+	$.win.close();
+	$.destroy();
 }
 
-getNowPlayingMovies();
+getMoviesByGenre();
